@@ -1,0 +1,1358 @@
+2021-05-26 11:55:49,700 | __main__ | ERROR | Expecting ',' delimiter: line 1 column 13 (char 12)
+2021-05-26 12:00:51,063 | __main__ | ERROR | The path "speech-to-text/examples/english.json" to the alphabet does not exist
+2021-05-26 12:01:35,379 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-26 12:03:20,280 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-26 12:51:00,164 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 13:08:19,804 | __main__ | ERROR | could not broadcast input array from shape (828,12) into shape (828,26)
+2021-05-26 14:09:20,649 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 14:18:40,250 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 26
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 26
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 14:24:04,812 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 2
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 2
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 14:41:53,711 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 2
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 2
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 14:43:56,618 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 14
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 14
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 14:58:11,463 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Labels length is zero in batch 0
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 15:42:50,550 | __main__ | ERROR | The audio file "media/audio.wav" does not exist
+2021-05-26 16:24:07,921 | __main__ | ERROR | 2 root error(s) found.
+  (0) Internal: Blas GEMM launch failed : a.shape=(1, 512), b.shape=(512, 512), m=1, n=512, k=512
+	 [[node bidirectional_1/while/MatMul_7 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:1076) ]]
+	 [[softmax/truediv/_91]]
+  (1) Internal: Blas GEMM launch failed : a.shape=(1, 512), b.shape=(512, 512), m=1, n=512, k=512
+	 [[node bidirectional_1/while/MatMul_7 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:1076) ]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node bidirectional_1/while/MatMul_7:
+ bidirectional_1/while/Identity_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2771)
+
+Input Source operations connected to node bidirectional_1/while/MatMul_7:
+ bidirectional_1/while/Identity_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2771)
+
+Original stack trace for 'bidirectional_1/while/MatMul_7':
+  File "predict.py", line 43, in <module>
+    main(args.path, args.audio, args.weights)
+  File "predict.py", line 15, in main
+    save_file = load(training_path, weights_path)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 144, in load
+    model = model_from_json(save_file['model'])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\models.py", line 379, in model_from_json
+    return layer_module.deserialize(config, custom_objects=custom_objects)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\__init__.py", line 55, in deserialize
+    printable_module_name='layer')
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\utils\generic_utils.py", line 144, in deserialize_keras_object
+    list(custom_objects.items())))
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 2535, in from_config
+    process_node(layer, node_data)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 2492, in process_node
+    layer(input_tensors[0], **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\wrappers.py", line 325, in __call__
+    return super(Bidirectional, self).__call__(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\wrappers.py", line 403, in call
+    y = self.forward_layer.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\recurrent.py", line 2112, in call
+    initial_state=initial_state)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\recurrent.py", line 609, in call
+    input_length=timesteps)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 2771, in rnn
+    swap_memory=True)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 3501, in while_loop
+    return_same_structure)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 3012, in BuildLoop
+    pred, body, original_loop_vars, loop_vars, shape_invariants)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 2937, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 2757, in _step
+    tuple(constants))
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\recurrent.py", line 600, in step
+    return self.cell.call(inputs, states, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\recurrent.py", line 1908, in call
+    self.recurrent_kernel_o))
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 1076, in dot
+    out = tf.matmul(x, y)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\dispatch.py", line 180, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\math_ops.py", line 2647, in matmul
+    a, b, transpose_a=transpose_a, transpose_b=transpose_b, name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_math_ops.py", line 6295, in mat_mul
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:12:00,053 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_276]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "continuetraining.py", line 35, in <module>
+    main(args.path)
+  File "continuetraining.py", line 25, in main
+    run_training(training, model_base, statistics, config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:28:07,825 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_276]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "continuetraining.py", line 35, in <module>
+    main(args.path)
+  File "continuetraining.py", line 25, in main
+    run_training(training, model_base, statistics, config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:29:48,562 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_276]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "continuetraining.py", line 35, in <module>
+    main(args.path)
+  File "continuetraining.py", line 25, in main
+    run_training(training, model_base, statistics, config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:30:15,566 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3,28,17,0,6,7,0,18,3,18,7,14 labels seen so far: 27,0,15,7,0,18,20,7,9,23,16,22,7,0,21,11,0,14,17,0,19,23,7,0,3,5,3,4,3,4,3,0,6,7,0,18,20,7,21,7,16,5,11,3,20,0,7,20,3,0,20,7,18,20,17,6,23,5,5,11,17,16,0,6,7,0,3,19,23,7,14,14,3,0,4,23,20,14,3,0,6,7,15,11,21,0,21,7,16,22,11,6,17,21,0,19,23,7,0,18,17,5,17,0,3,16,22,7,21,0,15,7,0,10,3,4,11,3,0,10,7,5,10,17,0,24,7,20,0,23,16,3,0,15,3,16,17,0,7,16,0,23,16,0,18,7,6,3
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_276]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "continuetraining.py", line 35, in <module>
+    main(args.path)
+  File "continuetraining.py", line 25, in main
+    run_training(training, model_base, statistics, config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:34:31,371 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-26 23:35:42,285 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-26 23:37:06,894 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-26 23:55:26,593 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 36,27,24,7,20,26,11,0,20,27,11,25,26,24,7,0,9,21,20,28,11,24,25,7,9,15,21,20,0,7,10,28,11,24,26,15,0,23,27,11,0,18,7,0,19,27,18,26,15,26,27,10,0,7,27,19,11,20,26,7,8,7,5,0,7,22,24,11,26,7,20,10,21,25,11,0,19,7,25,6 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 36,27,24,7,20,26,11,0,20,27,11,25,26,24,7,0,9,21,20,28,11,24,25,7,9,15,21,20,0,7,10,28,11,24,26,15,0,23,27,11,0,18,7,0,19,27,18,26,15,26,27,10,0,7,27,19,11,20,26,7,8,7,5,0,7,22,24,11,26,7,20,10,21,25,11,0,19,7,25,6 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:57:31,134 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 37,28,25,8,21,27,12,0,21,28,12,26,27,25,8,0,10,22,21,29,12,25,26,8,10,16,22,21,0,8,11,29,12,25,27,16,0,24,28,12,0,19,8,0,20,28,19,27,16,27,28,11,0,8,28,20,12,21,27,8,9,8,6,0,8,23,25,12,27,8,21,11,22,26,12,0,20,8,26,7 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 37,28,25,8,21,27,12,0,21,28,12,26,27,25,8,0,10,22,21,29,12,25,26,8,10,16,22,21,0,8,11,29,12,25,27,16,0,24,28,12,0,19,8,0,20,28,19,27,16,27,28,11,0,8,28,20,12,21,27,8,9,8,6,0,8,23,25,12,27,8,21,11,22,26,12,0,20,8,26,7 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-26 23:59:59,406 | __main__ | ERROR | Expecting ',' delimiter: line 3 column 3 (char 10)
+2021-05-27 00:08:04,090 | __main__ | ERROR | Expecting ',' delimiter: line 3 column 3 (char 10)
+2021-05-27 00:11:08,617 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 52,15,0,17,15,27,30,15,28,15,0,18,19,0,19,33,19,0,15,32,32,19,16,15,34,29,0,21,26,29,32,23,29,33,29,0,28,29,0,33,35,19,28,15,0,33,23,28,29,0,17,35,15,28,18,29,0,33,29,28,0,27,35,17,22,29,33,0,26,29,33,0,17,29,32,15,40,29,28,19,33,0,18,23,33,30,35,19,33,34,29,33,0,15,0,30,15,26,30,23,34,15,32,0,19,28,0,17,29,28,17,29,32,18,15,28,17,23,15,0,17,29,28,0,33,35,0,15,28,22,19,26,15,28,34,19,0,32,23,34,27,29,13 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 52,15,0,17,15,27,30,15,28,15,0,18,19,0,19,33,19,0,15,32,32,19,16,15,34,29,0,21,26,29,32,23,29,33,29,0,28,29,0,33,35,19,28,15,0,33,23,28,29,0,17,35,15,28,18,29,0,33,29,28,0,27,35,17,22,29,33,0,26,29,33,0,17,29,32,15,40,29,28,19,33,0,18,23,33,30,35,19,33,34,29,33,0,15,0,30,15,26,30,23,34,15,32,0,19,28,0,17,29,28,17,29,32,18,15,28,17,23,15,0,17,29,28,0,33,35,0,15,28,22,19,26,15,28,34,19,0,32,23,34,27,29,13 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:13:37,019 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 39,30,27,10,23,29,14,0,23,30,14,28,29,27,10,0,12,24,23,31,14,27,28,10,12,18,24,23,0,10,13,31,14,27,29,18,0,26,30,14,0,21,10,0,22,30,21,29,18,29,30,13,0,10,30,22,14,23,29,10,11,10,8,0,10,25,27,14,29,0,10,23,13,24,28,14,0,22,0,10,28,9 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 39,30,27,10,23,29,14,0,23,30,14,28,29,27,10,0,12,24,23,31,14,27,28,10,12,18,24,23,0,10,13,31,14,27,29,18,0,26,30,14,0,21,10,0,22,30,21,29,18,29,30,13,0,10,30,22,14,23,29,10,11,10,8,0,10,25,27,14,29,0,10,23,13,24,28,14,0,22,0,10,28,9 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:15:17,272 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 38,29,26,9,22,28,13,0,22,29,13,27,28,26,9,0,11,23,22,30,13,26,27,9,11,17,23,22,0,9,12,30,13,26,28,17,0,25,29,13,0,20,9,0,21,29,20,28,17,28,29,12,0,9,29,21,13,22,28,9,10,9,7,0,9,24,26,13,28,0,9,22,12,23,27,13,0,21,0,9,27,8 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 38,29,26,9,22,28,13,0,22,29,13,27,28,26,9,0,11,23,22,30,13,26,27,9,11,17,23,22,0,9,12,30,13,26,28,17,0,25,29,13,0,20,9,0,21,29,20,28,17,28,29,12,0,9,29,21,13,22,28,9,10,9,7,0,9,24,26,13,28,0,9,22,12,23,27,13,0,21,0,9,27,8 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:20:19,024 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 33,24,21,4,17,23,8,0,17,24,8,22,23,21,4,0,6,18,17,25,8,21,22,4,6,12,18,17,0,4,7,25,8,21,23,12,0,20,24,8,0,15,4,0,16,24,15,23,12,23,24,7,0,4,24,16,8,17,23,4,5,4,2,0,4,19,21,8,23,0,4,17,7,18,22,8,0,16,0,4,22,3 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 33,24,21,4,17,23,8,0,17,24,8,22,23,21,4,0,6,18,17,25,8,21,22,4,6,12,18,17,0,4,7,25,8,21,23,12,0,20,24,8,0,15,4,0,16,24,15,23,12,23,24,7,0,4,24,16,8,17,23,4,5,4,2,0,4,19,21,8,23,0,4,17,7,18,22,8,0,16,0,4,22,3 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:21:20,962 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 8,22,19,18,17,23,0,4,17,8,4,16,8,17,23,8,0,25,8,17,12,7,4,22,0,19,18,21,0,24,17,18,0,7,8,0,8,22,18,22,0,15,15,4,16,4,16,12,8,17,23,18,22,0,16,18,21,4,15,8,22,2,0,12,17,23,12,16,18,22,2,0,16,12,22,23,8,21,12,18,22,18,22,2,0,12,17,9,18,21,16,24,15,4,7,18,22,2,0,20,24,8,0,17,18,0,19,4,21,23,8,17,0,7,8,0,17,12,17,10,24,17,4,0,25,18,29,0,18,9,12,6,12,4,15,2 labels seen so far: 8,22,19,18,17,23,0,4,17,8,4,16,8,17,23,8,0,25,8,17,12,7,4,22,0,19,18,21,0,24,17,18,0,7,8,0,8,22,18,22,0,15,15,4,16,4,16,12,8,17,23,18,22,0,16,18,21,4,15,8,22,2,0,12,17,23,12,16,18,22,2,0,16,12,22,23,8,21,12,18,22,18,22,2,0,12,17,9,18,21,16,24,15,4,7,18,22,2,0,20,24,8,0,17,18,0,19,4,21,23,8,17,0,7,8,0,17,12,17,10,24,17,4,0,25,18
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 8,22,19,18,17,23,0,4,17,8,4,16,8,17,23,8,0,25,8,17,12,7,4,22,0,19,18,21,0,24,17,18,0,7,8,0,8,22,18,22,0,15,15,4,16,4,16,12,8,17,23,18,22,0,16,18,21,4,15,8,22,2,0,12,17,23,12,16,18,22,2,0,16,12,22,23,8,21,12,18,22,18,22,2,0,12,17,9,18,21,16,24,15,4,7,18,22,2,0,20,24,8,0,17,18,0,19,4,21,23,8,17,0,7,8,0,17,12,17,10,24,17,4,0,25,18,29,0,18,9,12,6,12,4,15,2 labels seen so far: 8,22,19,18,17,23,0,4,17,8,4,16,8,17,23,8,0,25,8,17,12,7,4,22,0,19,18,21,0,24,17,18,0,7,8,0,8,22,18,22,0,15,15,4,16,4,16,12,8,17,23,18,22,0,16,18,21,4,15,8,22,2,0,12,17,23,12,16,18,22,2,0,16,12,22,23,8,21,12,18,22,18,22,2,0,12,17,9,18,21,16,24,15,4,7,18,22,2,0,20,24,8,0,17,18,0,19,4,21,23,8,17,0,7,8,0,17,12,17,10,24,17,4,0,25,18
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:29:40,280 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 51,14,0,16,14,26,29,14,27,14,0,17,18,0,18,32,18,0,14,31,31,18,15,14,33,28,0,20,25,28,31,22,28,32,28,0,27,28,0,32,34,18,27,14,0,32,22,27,28,0,16,34,14,27,17,28,0,32,28,27,0,26,34,16,21,28,32,0,25,28,32,0,16,28,31,14,39,28,27,18,32,0,17,22,32,29,34,18,32,33,28,32,0,14,0,29,14,25,29,22,33,14,31,0,18,27,0,16,28,27,16,28,31,17,14,27,16,22,14,0,16,28,27,0,32,34,0,14,27,21,18,25,14,27,33,18,0,31,22,33,26,28,12 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 51,14,0,16,14,26,29,14,27,14,0,17,18,0,18,32,18,0,14,31,31,18,15,14,33,28,0,20,25,28,31,22,28,32,28,0,27,28,0,32,34,18,27,14,0,32,22,27,28,0,16,34,14,27,17,28,0,32,28,27,0,26,34,16,21,28,32,0,25,28,32,0,16,28,31,14,39,28,27,18,32,0,17,22,32,29,34,18,32,33,28,32,0,14,0,29,14,25,29,22,33,14,31,0,18,27,0,16,28,27,16,28,31,17,14,27,16,22,14,0,16,28,27,0,32,34,0,14,27,21,18,25,14,27,33,18,0,31,22,33,26,28,12 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:31:39,997 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 43,34,31,14,27,33,18,0,27,34,18,32,33,31,14,0,16,28,27,35,18,31,32,14,16,22,28,27,0,14,17,35,18,31,33,22,0,30,34,18,0,25,14,0,26,34,25,33,22,33,34,17,0,14,34,26,18,27,33,14,15,14,12,0,14,29,31,18,33,14,27,17,28,32,18,0,26,14,32,13 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 43,34,31,14,27,33,18,0,27,34,18,32,33,31,14,0,16,28,27,35,18,31,32,14,16,22,28,27,0,14,17,35,18,31,33,22,0,30,34,18,0,25,14,0,26,34,25,33,22,33,34,17,0,14,34,26,18,27,33,14,15,14,12,0,14,29,31,18,33,14,27,17,28,32,18,0,26,14,32,13 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 00:32:15,797 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 00:39:21,443 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 00:40:19,403 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 00:41:32,216 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 00:42:54,752 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:33:46,738 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:35:52,614 | __main__ | ERROR | 'charmap' codec can't decode byte 0x81 in position 21729: character maps to <undefined>
+2021-05-27 08:37:25,764 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:40:07,936 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:42:56,526 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:45:42,522 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:47:13,559 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:48:47,485 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:51:36,558 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:53:15,098 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:54:37,128 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 08:55:02,188 | __main__ | ERROR | Expecting value: line 29 column 1 (char 187)
+2021-05-27 09:13:25,520 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-27 09:15:47,992 | __main__ | ERROR | To little data provided. Increase the trainingDataQuantity property in the training plan
+2021-05-27 09:20:07,602 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 29,15,13,16,15,14,9,1,14,12,1,0,16,5,18,19,15,14,1,19,0,4,5,0,1,13,2,15,19,0,19,5,24,15,19,0,25,0,4,5,0,20,15,4,1,19,0,12,1,19,0,3,12,1,19,5,19,0,4,5,0,12,1,0,19,15,3,9,5,4,1,4 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 29,15,13,16,15,14,9,1,14,12,1,0,16,5,18,19,15,14,1,19,0,4,5,0,1,13,2,15,19,0,19,5,24,15,19,0,25,0,4,5,0,20,15,4,1,19,0,12,1,19,0,3,12,1,19,5,19,0,4,5,0,12,1,0,19,15,3,9,5,4,1,4 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 09:21:09,132 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 29,15,13,16,15,14,9,1,14,12,1,0,16,5,18,19,15,14,1,19,0,4,5,0,1,13,2,15,19,0,19,5,24,15,19,0,25,0,4,5,0,20,15,4,1,19,0,12,1,19,0,3,12,1,19,5,19,0,4,5,0,12,1,0,19,15,3,9,5,4,1,4 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 0 num_classes: 29 labels: 29,15,13,16,15,14,9,1,14,12,1,0,16,5,18,19,15,14,1,19,0,4,5,0,1,13,2,15,19,0,19,5,24,15,19,0,25,0,4,5,0,20,15,4,1,19,0,12,1,19,0,3,12,1,19,5,19,0,4,5,0,12,1,0,19,15,3,9,5,4,1,4 labels seen so far: 
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[ctc/CTCLoss/_205]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 09:29:41,807 | __main__ | ERROR | 2 root error(s) found.
+  (0) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 20 num_classes: 29 labels: 13,5,0,8,1,0,16,21,5,19,20,15,0,5,19,20,1,0,13,1,14,1,14,1,0,12,1,0,3,1,2,5,26,1,0,3,15,13,15,0,21,14,0,6,1,18,15,12,28,0,4,9,3,5,0,17,21,5,0,5,12,0,19,5,14,15,18,0,16,18,9,14,3,9,16,5,0,4,5,0,12,1,0,16,1,26,0,14,15,0,4,21,18,1,0,4,15,19,0,4,9,1,19,0,13,1,19,0,1,12,0,6,18,5,14,20,5,0,4,5,0,12,1,0,14,1,3,9,15,14 labels seen so far: 13,5,0,8,1,0,16,21,5,19,20,15,0,5,19,20,1,0,13,1,14,1,14,1,0,12,1,0,3,1,2,5,26,1,0,3,15,13,15,0,21,14,0,6,1,18,15,12
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+  (1) Invalid argument: Saw a non-null label (index >= num_classes - 1) following a null label, batch: 20 num_classes: 29 labels: 13,5,0,8,1,0,16,21,5,19,20,15,0,5,19,20,1,0,13,1,14,1,14,1,0,12,1,0,3,1,2,5,26,1,0,3,15,13,15,0,21,14,0,6,1,18,15,12,28,0,4,9,3,5,0,17,21,5,0,5,12,0,19,5,14,15,18,0,16,18,9,14,3,9,16,5,0,4,5,0,12,1,0,16,1,26,0,14,15,0,4,21,18,1,0,4,15,19,0,4,9,1,19,0,13,1,19,0,1,12,0,6,18,5,14,20,5,0,4,5,0,12,1,0,14,1,3,9,15,14 labels seen so far: 13,5,0,8,1,0,16,21,5,19,20,15,0,5,19,20,1,0,13,1,14,1,14,1,0,12,1,0,3,1,2,5,26,1,0,3,15,13,15,0,21,14,0,6,1,18,15,12
+	 [[node ctc/CTCLoss (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3956) ]]
+	 [[training/Adam/gradients/ctc/CTCLoss_grad/mul/_220]]
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Input Source operations connected to node ctc/CTCLoss:
+ ctc/ToInt64 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3928)	
+ ctc/ToInt32_2 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3950)	
+ ctc/ToInt32_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3949)	
+ ctc/Log (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:3952)
+
+Original stack trace for 'ctc/CTCLoss':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 18, in main
+    run_training(training, path, TrainingStatistics([], []), config)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\trainer.py", line 41, in run_training
+    model = add_ctc_loss(training.model)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 64, in add_ctc_loss
+    [model.output, labels, output_lengths, label_length])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\core.py", line 685, in call
+    return self.function(inputs, **arguments)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 52, in ctc_batch_cost
+    return K.ctc_batch_cost(y_true, y_pred, input_length, label_length)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 3956, in ctc_batch_cost
+    sequence_length=input_length), 1)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\ctc_ops.py", line 176, in ctc_loss
+    ignore_longer_outputs_than_inputs=ignore_longer_outputs_than_inputs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_ctc_ops.py", line 355, in ctc_loss
+    name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+2021-05-27 10:05:15,902 | __main__ | ERROR | 2 root error(s) found.
+  (0) Resource exhausted: OOM when allocating tensor with shape[32,2313,1102] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[node bidirectional_1/concat (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:1885) ]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+	 [[loss/mul/_225]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+  (1) Resource exhausted: OOM when allocating tensor with shape[32,2313,1102] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[node bidirectional_1/concat (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:1885) ]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+0 successful operations.
+0 derived errors ignored.
+
+Errors may have originated from an input operation.
+Input Source operations connected to node bidirectional_1/concat:
+ bidirectional_1/ReverseV2_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2299)	
+ bidirectional_1/transpose_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2780)
+
+Input Source operations connected to node bidirectional_1/concat:
+ bidirectional_1/ReverseV2_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2299)	
+ bidirectional_1/transpose_1 (defined at C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py:2780)
+
+Original stack trace for 'bidirectional_1/concat':
+  File "train.py", line 37, in <module>
+    main(args.path, args.plan)
+  File "train.py", line 17, in main
+    training = create_training(training_plan_path)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\training\training.py", line 108, in create
+    model = get_model(config.net)
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 133, in get
+    return graves()
+  File "C:\Users\leomo\OneDrive\Escritorio\voivetext\trainer\models.py", line 82, in graves
+    x = Bidirectional(LSTM(rnn_size, return_sequences=True))(x)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\wrappers.py", line 325, in __call__
+    return super(Bidirectional, self).__call__(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\engine\topology.py", line 619, in __call__
+    output = self.call(inputs, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\layers\wrappers.py", line 414, in call
+    output = K.concatenate([y, y_rev])
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\keras\backend\tensorflow_backend.py", line 1885, in concatenate
+    return tf.concat([to_dense(x) for x in tensors], axis)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\dispatch.py", line 180, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\array_ops.py", line 1299, in concat
+    return gen_array_ops.concat_v2(values=values, axis=axis, name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\ops\gen_array_ops.py", line 1464, in concat_v2
+    "ConcatV2", values=values, axis=axis, name=name)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 788, in _apply_op_helper
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 3616, in create_op
+    op_def=op_def)
+  File "C:\Users\leomo\anaconda3\envs\voz\lib\site-packages\tensorflow\python\framework\ops.py", line 2005, in __init__
+    self._traceback = tf_stack.extract_stack()
+

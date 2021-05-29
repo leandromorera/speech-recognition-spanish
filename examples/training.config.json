@@ -1,0 +1,10 @@
+{
+  "epochs": 10,
+  "batchSize": 20,
+  "trainingDataQuantity": 50000,
+  "net": "graves",
+  "trainingData": [
+    "DB/custom_training.config.json"
+  ],
+  "alphabetPath": "speech-to-text/examples/english.json"
+}

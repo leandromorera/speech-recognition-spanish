@@ -1,0 +1,10 @@
+{
+    "epochs": 200,
+    "batchSize": 8,
+    "trainingDataQuantity": 11111,
+    "net": "graves",
+    "trainingData": [
+        "DB/nuevo.json"
+    ],
+    "alphabetPath": "examples/english.json"
+}

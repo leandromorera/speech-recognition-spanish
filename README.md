@@ -3,7 +3,7 @@
 #Please use the following dataset:
 https://www.kaggle.com/bryanpark/spanish-single-speaker-speech-dataset
 
-# En your dictionary must be represented the symbols of your transcription
+# In your dictionary must be represented symbols of your transcription
 # we advice to avoid Upercase leeters and accent also ñ.
 
 # for train:

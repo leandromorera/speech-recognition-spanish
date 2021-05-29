@@ -1,6 +1,6 @@
 # speech-recognition-spanish
 
-#Please use the following dataset:
+You can use the following dataset:
 https://www.kaggle.com/bryanpark/spanish-single-speaker-speech-dataset
 
 transcript.txt must be formated by the file (DB/converter.py)

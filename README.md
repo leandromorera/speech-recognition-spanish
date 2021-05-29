@@ -8,3 +8,6 @@ In your dictionary must be represented symbols of your transcription (DB/nuevo.j
 
 # for train:
 python train.py "training/graves" "custom_trining.json"
+
+# for prediction
+python predict.py "trainings/graves.json" "trainings/graves.weights-xx-xx.xxxx.h5" "media/audio.wav"
